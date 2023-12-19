@@ -7,8 +7,7 @@ function s(){
          p = document.createElement('li');
         p.innerHTML = name[i];
         display.appendChild(p);
-        let val = p.value = i;
-         c(val);
+         c(i);
     }
 }
 

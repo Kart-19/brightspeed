@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d3" style="background-color: blue; border: 20px solid blue;" onclick="d3fun()">
+        D3
+        <div id="d2" style="background-color: green; border: 20px solid green;" onclick="d2fun(event.stopPropagation())">
+            D2
+            <div id="d1" style="background-color: red; border: 20px solid red;" onclick="d1fun()">
+                D1
+            </div>
+        </div>
+    </div>
+    
+    
+
+
+    <script>
+
+        // var d1 = document.getElementById("d1");
+        // var d2 = document.getElementById("d2");
+        // var  d3 = document.getElementById("d3");
+
+       function d1fun(){
+            console.log("D1 Clicked");
+        }
+        function d2fun(){
+            // event.stopPropagation();
+            console.log("D2 Clicked");
+        }
+        function d3fun(){
+            console.log("D3 Clicked");
+        }
+
+        
+    </script>
+</body>
+</html>
