@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Register</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="./form.js"></script>
+</head>
+<body>
+   <div ng-controller="main">
+    <button ng-click="switchForm()">Switch</button>
+    <div ng-if="signup">
+        <div ng-controller="signup">
+           
+            <form>
+                <input type="text" placeholder="Name" ng-model="name"><br>
+                <input type="text" placeholder="Email" ng-model="email"><br>
+                <input type="text" placeholder="Password" ng-model="pass"><br>
+                <input type="text" placeholder="Location" ng-model="location"><br>
+
+                <button ng-click="signupData()">Signup</button>
+            </form>
+        </div>
+    </div>
+
+    <div ng-if="login">
+        <div ng-controller="login">
+            <input type="text"  placeholder="Email" ng-model="email"><br>
+            <input type="text" placeholder="Password" ng-model="pass"><br>
+
+                <button ng-click="loginData()">Login</button>
+        </div>
+    </div>
+  </div> 
+</body>
+</html>

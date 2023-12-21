@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <style>
+        .hi{
+            color:red;
+            background-color: black;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="./task.js"></script>
+</head>
+<body ng-controller="taskctrl">
+
+    <div ng-click="change()" ng-style="{'color':col, 'background-color': bg}">{{n}}</div>
+    <br>
+    -------------------------------------------------- <br>
+    <button ng-click="toogle()">Toogle</button><br>
+    <button ng-if="log">Login</button>
+    <button ng-if="sign">Signup</button>
+
+    <br>
+    -------------------------------------------------
+    
+
+    <table border="2px" cellspacing = "5px" cellpadding="5px">
+        <tr >
+            <td>Name</td>
+            <td>Country</td>
+        </tr>
+        <tr ng-repeat="i in arr">
+            <td>{{i.name}}</td>
+            <td>{{i.country}}</td>
+        </tr>
+    </table>
+
+
+    -------------------------------------------------------------------
+
+    <form >
+        <input type="text" ng-model="name" placeholder="Enter the Name">
+        <input type="text" ng-model="email" placeholder="Enter the email">
+        <input type="text" ng-model="password" placeholder="Enter the password">
+        <input type="text" ng-model="location" placeholder="Enter the location">
+        <button ng-click="getData()">Send</button>
+    
+    </form>
+
+    <div>Your Entered Data</div>
+    <div>{{obj}}</div>
+</body>
+</html>

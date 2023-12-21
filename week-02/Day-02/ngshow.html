@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="./ngshow.js"></script>
+</head>
+<body ng-controller="toggle">
+    
+    {{name}}
+
+    <div ng-show="isred">Red</div>
+
+    <!-- Changing the css property by angularjs -->
+    <input type="text" ng-model="c" placeholder="Color">
+    <h3 ng-style="{'color':c}">Bye</h3>
+    -----------------------------------------
+
+    <div>Val</div>
+    <button  ng-show="red" ng-click="btn('red')">Red</button>
+    <button ng-click="btn('yellow')" ng-show="yellow">yellow</button>
+    <button ng-click="btn('green')" ng-show="green">green</button>
+
+    <div ng-show="check">ng-show</div>
+    <div ng-if="check">ng-if</div>
+
+    <!-- Images by ng-src -->
+    <img ng-src="{{photo}}">
+
+    <!-- <div>{{photo}}</div> -->
+</body>
+</html>
