@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+
+    <!-- Angular Scrip -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="./showController.js"></script>
+    <script src="./postController.js"></script>
+    <script src="./service.js"></script>
+</head>
+<body>
+
+    <div ng-controller="postCtrl">
+
+        <input type="text" ng-model="name" placeholder="Enter the Name"><br>
+        <input type="text" ng-model="email" placeholder="Enter the Email"><br>
+        <input type="text" ng-model="pass" placeholder="Enter the Password"><br>
+
+        <button ng-click="postData()">PostData</button> <br><br>
+    </div>
+
+    <div ng-controller="showCtrl">
+
+        <button ng-click="showData()">ShowData</button>
+        <p ng-repeat="i in response">
+            Name : {{i.name}}
+            Email : {{i.email}}
+            Password : {{i.password}}
+          
+        </p>
+
+    </div>
+    
+</body>
+</html>

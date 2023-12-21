@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filters</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="./filters.js"></script>
+</head>
+<body>
+    <div ng-controller="fillCtrl">
+        {{msg | uppercase}} <br>
+        {{msg | lowercase}}
+
+        <br>
+        <!-- Search the names in the array -->
+        <!-- <input type="text" ng-model="name" placeholder="Enter the Name">
+
+        <p ng-repeat="i in arr | filter : name ">
+            {{i}}
+        </p><br> -->
+
+        <h2>Sort by different Fields</h2>
+        <br>
+        <input type="text" ng-model="search" placeholder="Enter the Name">
+        <br>
+        <button >Sort Name</button>
+        <button >Sort Age</button>
+        <button >Sort Location</button>
+        <table border="2px" cellspacing="5px" cellpadding="5px">
+            <tr>
+                <th ng-click="filterMethod('name')">Name</th>
+                <th ng-click="filterMethod('age')">Age</th>
+                <th ng-click="filterMethod('location')">Location</th>
+                <th ng-click="filterMethod('doj')">Date Of Join</th>
+            </tr>
+
+            <tr ng-repeat="i in arrobj | filter : { location : search} | orderBy : byName ">
+                <td>{{i.name}}</td>
+                <td>{{i.age}}</td>
+                <td>{{i.location}}</td>
+                <td>{{i.doj  }}</td>
+            </tr>
+        </table>
+    </div>
+    
+</body>
+</html>
